@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:cupertino_trials/actionsheet50.dart'; // Import your Actionsheet50 file
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: const BottomNavExample(),
+    return CupertinoApp(
+      debugShowCheckedModeBanner: false, title: 'ActionSheet Demo',
+      home: const Actionsheet50(), // Set Actionsheet50 as the home widget
     );
   }
 }
@@ -45,8 +46,7 @@ class _BottomNavExampleState extends State<BottomNavExample> {
         decorationColor: Colors.red, // Optional: Set underline color
         decorationThickness: 2.0, // Optional: Set underline thickness
       ),
-    )
-    ),
+    )),
     const Center(
         child: Text(
       'Read Amazing Articles All Around the World!',
